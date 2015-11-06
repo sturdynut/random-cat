@@ -1,0 +1,26 @@
+{
+  "name": "random-cat",
+  "version": "0.1.0",
+  "description": "A fantastic library if you want pictures of random cats.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sturdynut/random-cat.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Matti Salokangas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sturdynut/random-cat/issues"
+  },
+  "homepage": "https://github.com/sturdynut/random-cat#readme",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.3"
+  }
+}
