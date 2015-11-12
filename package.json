@@ -1,6 +1,6 @@
 {
   "name": "random-cat",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A fantastic library if you want pictures of random cats.",
   "main": "index.js",
   "scripts": {
