@@ -1,19 +1,17 @@
 function RandomCat() { }
 
 RandomCat.prototype.get = function (options) {
-  return this._generateUrl(options);
-}
-
-RandomCat.prototype._generateUrl = function (options) {
   options = options || {};
 
   if (options.dummyText) {
     options.dummyText = options.dummyText.replace(/ /g, '-');
   }
 
+  var randomSizes = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600];
+
   var urlParts = [
-      options.width || 400
-    , options.height || 200
+      options.width || randomSizes[Math.ceil(Math.random() * 12)]
+    , options.height || randomSizes[Math.ceil(Math.random() * 12)]
     , options.category || 'cats'
     , options.imageIndex
     , options.dummyText
@@ -35,7 +33,5 @@ RandomCat.prototype._generateUrl = function (options) {
 
   return protocol + '://' + baseUrl + '/' + urlParts.join('/');
 }
-
-RandomCat.prototype.constructor = RandomCat;
 
 module.exports = (new RandomCat());
