@@ -4,13 +4,14 @@ RandomCat.prototype.get = function (options) {
   options = options || {};
 
   if (options.dummyText) {
-    options.dummyText = options.dummyText.replace(/ /g, '-');
+    options.dummyText = escape(options.dummyText);
   }
 
   var randomSizes = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600];
 
   var urlParts = [
-      options.width || randomSizes[Math.ceil(Math.random() * 12)]
+      options.gray ? 'g' : false
+    , options.width || randomSizes[Math.ceil(Math.random() * 12)]
     , options.height || randomSizes[Math.ceil(Math.random() * 12)]
     , options.category || 'cats'
     , options.imageIndex

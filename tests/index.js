@@ -46,17 +46,18 @@ describe('random-cat', function () {
       dummyText: 'avocados are awesome'
     });
 
-    expect(catUrl).to.match(/http:\/\/lorempixel.com\/120\/500\/cats\/avocados-are-awesome/);
+    expect(catUrl).to.match(/http:\/\/lorempixel.com\/120\/500\/cats\/avocados%20are%20awesome/);
   });
 
-  it('can get a random picture with width, height, category, image index and dummy text', function () {
+  it('can get a gray-scale, random picture with width, height, category, image index and dummy text', function () {
     var catUrl = randomCat.get({
+      gray: true,
       width: 200,
       height: 700,
       category: 'people',
       imageIndex: 2,
       dummyText: 'people are awesome'
     });
-    expect(catUrl).to.match(/http:\/\/lorempixel.com\/200\/700\/people\/2\/people-are-awesome/);
+    expect(catUrl).to.match(/http:\/\/lorempixel.com\/g\/200\/700\/people\/2\/people%20are%20awesome/);
   });
 })

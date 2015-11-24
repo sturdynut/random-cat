@@ -39,13 +39,14 @@ var urlOfPeople = randomCat.get({
 });
 
 // All of the options
-// http://lorempixel.com/200/700/food/2/om+nom+nom
+// http://lorempixel.com/g/200/700/food/2/om%20nom%20nom
 var urlWithAllOptions = randomCat.get({
   width: 200,
   height: 700,
   category: 'food',
   imageIndex: 2,
-  dummyText: 'om nom nom'
+  dummyText: 'om nom nom',
+  gray: true
 });
 ```
 
