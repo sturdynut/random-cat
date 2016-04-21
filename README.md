@@ -1,4 +1,4 @@
-# Random Cat
+# Random Cat :smiley_cat:
 
 [![Build Status](https://travis-ci.org/sturdynut/random-cat.svg?branch=master)](https://travis-ci.org/sturdynut/random-cat)
 
