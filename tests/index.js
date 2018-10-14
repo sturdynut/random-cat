@@ -12,6 +12,7 @@ describe('random-cat', function() {
 	});
 
 	it('can get a random cat with a width and height', function() {
+		const randomCat = new RandomCat();
 		const catUrl = randomCat.get({
 			width: 120,
 			height: 500
@@ -21,7 +22,8 @@ describe('random-cat', function() {
 	});
 
 	it('can get a random picture with an image index', function() {
-		var catUrl = randomCat.get({
+		const randomCat = new RandomCat();
+		const catUrl = randomCat.get({
 			width: 120,
 			height: 500,
 			gray: 'g',
@@ -32,7 +34,8 @@ describe('random-cat', function() {
 	});
 
 	it('can get a random picture with message text', function() {
-		var catUrl = randomCat.get({
+		const randomCat = new RandomCat();
+		const catUrl = randomCat.get({
 			width: 120,
 			height: 500,
 			message: 'avocados are awesome'
@@ -42,7 +45,8 @@ describe('random-cat', function() {
 	});
 
 	it('can get a gray-scale, random picture with width, height, image index and message text', function() {
-		var catUrl = randomCat.get({
+		const randomCat = new RandomCat();
+		const catUrl = randomCat.get({
 			gray: true,
 			width: 200,
 			height: 700,
