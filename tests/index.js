@@ -13,7 +13,7 @@ describe('random-cat', function() {
 
 	it('can get a random cat with a width and height', function() {
 		const randomCat = new RandomCat();
-		const catUrl = randomCat.get({
+		const catUrl = randomCat.getURL({
 			width: 120,
 			height: 500
 		});
@@ -23,10 +23,9 @@ describe('random-cat', function() {
 
 	it('can get a random picture with an image index', function() {
 		const randomCat = new RandomCat();
-		const catUrl = randomCat.get({
+		const catUrl = randomCat.getURL({
 			width: 120,
 			height: 500,
-			gray: 'g',
 			imageIndex: 0
 		});
 
@@ -35,7 +34,7 @@ describe('random-cat', function() {
 
 	it('can get a random picture with message text', function() {
 		const randomCat = new RandomCat();
-		const catUrl = randomCat.get({
+		const catUrl = randomCat.getURL({
 			width: 120,
 			height: 500,
 			message: 'avocados are awesome'
@@ -46,13 +45,12 @@ describe('random-cat', function() {
 
 	it('can get a gray-scale, random picture with width, height, image index and message text', function() {
 		const randomCat = new RandomCat();
-		const catUrl = randomCat.get({
-			gray: true,
+		const catUrl = randomCat.getURL({
 			width: 200,
 			height: 700,
 			imageIndex: 2,
 			message: 'people are awesome'
 		});
-		expect(catUrl).to.match(/http:\/\/lorempixel.com\/g\/200\/700\/cats\/2\/people%20are%20awesome/);
+		expect(catUrl).to.match(/http:\/\/lorempixel.com\/200\/700\/cats\/2\/people%20are%20awesome/);
 	});
 });
