@@ -5,12 +5,14 @@ class RandomCat {
 		this.gray = options.gray ? 'g' : false;
 		this.width = options.width || RANDOM_SIZES[Math.ceil(Math.random() * 12)];
 		this.height = options.height || RANDOM_SIZES[Math.ceil(Math.random() * 12)];
-		this.imageIndex = options.imageIndex;
-		this.message = options.message;
+		this.imageIndex = options.imageIndex || 0;
+		this.message = options.message || '';
 	}
 
 	getURL() {
-		return `https://lorempixel.com/${this.width}/${this.height}/${this.category}/cats/${this.imageIndex}`;
+		return `https://lorempixel.com/${this.gray}/${this.width}/${this.height}/cats/${this.imageIndex}/${
+			this.message
+		}`;
 	}
 }
 
